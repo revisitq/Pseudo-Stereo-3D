@@ -1,7 +1,7 @@
-# Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving, CVPR 2022
+# Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving.(CVPR 2022, [\[Paper\]](https://arxiv.org/abs/2203.02112) [\[supplementary file\]](pdf/supplementary_file.pdf))
 ![avatar](img/overview.png)
 
-The supplementary file is [here](pdf/supplementary_file.pdf).
+
 
 The code is coming soon.
 
