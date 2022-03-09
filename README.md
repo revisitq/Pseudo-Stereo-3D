@@ -1,6 +1,6 @@
-# Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving. (CVPR 2022)<font size=3>[\[Paper\]](https://arxiv.org/abs/2203.02112) [\[Supplementary file\]](pdf/supplementary_file.pdf)</font>
-<font size=4> Authors: Yi-Nan Chen, [Hang Dai](https://scholar.google.com/citations?hl=en&user=6yvjpQQAAAAJ&view_op=list_works) and Yong Ding
-
+# Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving. (CVPR 2022)
+<font size=4> Authors: Yi-Nan Chen, [Hang Dai](https://scholar.google.com/citations?hl=en&user=6yvjpQQAAAAJ&view_op=list_works) and Yong Ding \
+<font size=3>[\[Paper\]](https://arxiv.org/abs/2203.02112) [\[Supplementary file\]](pdf/supplementary_file.pdf)</font>
 
 ![avatar](img/overview.png)
 
