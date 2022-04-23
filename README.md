@@ -1,4 +1,5 @@
 # Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving. (CVPR 2022)
+<font size=4> Authors: Yi-Nan Chen, [Hang Dai](https://scholar.google.com/citations?hl=en&user=6yvjpQQAAAAJ&view_op=list_works) and Yong Ding \
 <font size=3>[\[Paper\]](https://arxiv.org/abs/2203.02112) [\[Supplementary file\]](pdf/supplementary_file.pdf)</font>
 
 ![avatar](img/overview.png)
@@ -8,6 +9,16 @@ Our pseudo-stereo based on two stereo-based models LIGA-Stereo(in paper) YOLOSte
 - LIGA-Stereo
 - YOLOStereo
 
+# Citation
+```
+@InProceedings{Chen_2022_CVPR,
+    title={Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving},
+    author={Yi-Nan Chen and Hang Dai and Yong Ding},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+}
+```
 # Acknowledgements
  We would like to thank the repositories as follow:
 
