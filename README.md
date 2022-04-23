@@ -3,7 +3,10 @@
 
 ![avatar](img/overview.png)
 
-The code is coming soon.
+Our pseudo-stereo based on two stereo-based models LIGA-Stereo(in paper) YOLOStereo(in supplementary file). Please follow the instructions to run the code.
+
+- LIGA-Stereo
+- YOLOStereo
 
 # Acknowledgements
  We would like to thank the repositories as follow:
