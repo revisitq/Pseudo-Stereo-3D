@@ -24,7 +24,7 @@ We now release the code for feature-level generation and faeture-clone generatio
 
     `./scripts/dist_train.sh ${NUM_GPUS} 'exp_name' ./configs/stereo/kitti_models/feature_clone.yaml`
     
-- YOLOStereo
+- YOLOStereo3D
 
     `Step I`: Follow the instruction of [visualDet3D](https://github.com/Owen-Liuyuxuan/visualDet3D) to install the dependencies.
 
