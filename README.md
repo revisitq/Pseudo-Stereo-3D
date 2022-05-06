@@ -4,7 +4,7 @@
 
 ![avatar](img/overview.png)
 
-`The code is tested on a ubuntu server with NVIDIA 3090`.
+`The code is tested on an ubuntu server with NVIDIA 3090`.
 
 We now release the code for feature-level generation and faeture-clone generation. We apply our methods on the follows stereo-based detectors:
 - LIGA-Stereo
