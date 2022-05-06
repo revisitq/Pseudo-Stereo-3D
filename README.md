@@ -4,11 +4,31 @@
 
 ![avatar](img/overview.png)
 
-Our pseudo-stereo based on two stereo-based models LIGA-Stereo(in paper) YOLOStereo(in supplementary file). Please follow the instructions to run the code.
+`The code is tested on a ubuntu server with NVIDIA 3090`.
 
+We now release the code for feature-level generation and faeture-clone generation. We apply our methods on the follows stereo-based detectors:
 - LIGA-Stereo
+
+    `Step I`: Follow the instruction of [LIGA-Stereo](https://github.com/xy-guo/LIGA-Stereo) to install the dependencies.
+
+    `Step II`: Replace the some files in `LIGA-Stereo` use the files that we provide in [here](stereo_models/LIGA).
+
+    `Step III`: Prepare the data. Please fisrt follow instruction in [LIGA-Stereo](https://github.com/xy-guo/LIGA-Stereo) to prepeare the data. Then download the estimated depth maps by DORN from `here`([training](https://drive.google.com/open?id=1lSJpQ8GUCxRNtWxo0lduYAbWkkXQa2cb), [testing](https://drive.google.com/file/d/1JuDhHGH8DXzNkZSmaVrWyEhI3YuE2GqT/view)). 
+
+    `Step IV`: Training, use the command as follows to train the model. Note that we can only set bacth size to 1 on each GPU in our practice.
+    - feature-level generation
+    - feature-clone
 - YOLOStereo
 
+    `Step I`: Follow the instruction of [visualDet3D](https://github.com/Owen-Liuyuxuan/visualDet3D) to install the dependencies.
+
+    `Step II`: Replace the some files in `visualDet3D` use the files that we provide in [here](stereo_models/YOLOStereo3D).
+
+    `Step III`: Prepare the data. Please fisrt follow instruction in [visualDet3D](https://github.com/Owen-Liuyuxuan/visualDet3D) to prepeare the data. Then download the estimated depth maps by DORN from `here`([training](https://drive.google.com/open?id=1lSJpQ8GUCxRNtWxo0lduYAbWkkXQa2cb), [testing](https://drive.google.com/file/d/1JuDhHGH8DXzNkZSmaVrWyEhI3YuE2GqT/view)).
+
+    - feature-level generation
+
+For image-level generation, we will release the synthesised virtual right iamges.
 # Citation
 ```
 @InProceedings{Chen_2022_CVPR,
