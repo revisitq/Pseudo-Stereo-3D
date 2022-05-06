@@ -32,6 +32,8 @@ We now release the code for feature-level generation and faeture-clone generatio
 
     `Step III`: Prepare the data. Please fisrt follow instruction in [visualDet3D](https://github.com/Owen-Liuyuxuan/visualDet3D) to prepeare the data. Then download the estimated depth maps by DORN from `here`([training](https://drive.google.com/open?id=1lSJpQ8GUCxRNtWxo0lduYAbWkkXQa2cb), [testing](https://drive.google.com/file/d/1JuDhHGH8DXzNkZSmaVrWyEhI3YuE2GqT/view)). Then put the depth maps into data/training/image_2_dorn.
 
+    `Step IV`: Training, use the command as follows to train the model.
+
     - feature-level generation
     
     `./launcher/train.sh  --config/feature_level_generation.py 0 $experiment_name `
