@@ -289,7 +289,7 @@ class LigaBackbone(nn.Module):
 
     def forward(self, batch_dict):
         left = batch_dict['left_img']
-        virtual_right = batch_dict['virtual_right_img']
+        # virtual_right = batch_dict['virtual_right_img']
         depth_map = batch_dict['depth_map']
         calib = batch_dict['calib']
         fu_mul_baseline = torch.as_tensor(

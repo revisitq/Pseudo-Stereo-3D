@@ -4,7 +4,7 @@
 
 ![avatar](img/overview.png)
 
-`The code is tested on an ubuntu server with NVIDIA 3090`.
+`The code is tested on an ubuntu server with NVIDIA RTX 3090`.
 
 We now release the code for feature-level generation and faeture-clone generation. We apply our methods on the follows stereo-based detectors:
 - LIGA-Stereo
@@ -13,20 +13,28 @@ We now release the code for feature-level generation and faeture-clone generatio
 
     `Step II`: Replace the some files in `LIGA-Stereo` use the files that we provide in [here](stereo_models/LIGA).
 
-    `Step III`: Prepare the data. Please fisrt follow instruction in [LIGA-Stereo](https://github.com/xy-guo/LIGA-Stereo) to prepeare the data. Then download the estimated depth maps by DORN from `here`([training](https://drive.google.com/open?id=1lSJpQ8GUCxRNtWxo0lduYAbWkkXQa2cb), [testing](https://drive.google.com/file/d/1JuDhHGH8DXzNkZSmaVrWyEhI3YuE2GqT/view)). 
+    `Step III`: Prepare the data. Please fisrt follow instruction in [LIGA-Stereo](https://github.com/xy-guo/LIGA-Stereo) to prepeare the data. Then download the estimated depth maps by DORN from `here`([training](https://drive.google.com/open?id=1lSJpQ8GUCxRNtWxo0lduYAbWkkXQa2cb), [testing](https://drive.google.com/file/d/1JuDhHGH8DXzNkZSmaVrWyEhI3YuE2GqT/view)). Then put the depth maps into data/training/depth_2_dorn.
 
     `Step IV`: Training, use the command as follows to train the model. Note that we can only set bacth size to 1 on each GPU in our practice.
     - feature-level generation
+
+    `./scripts/dist_train.sh ${NUM_GPUS} 'exp_name' ./configs/stereo/kitti_models/feature_level_generation.yaml`
+
     - feature-clone
+
+    `./scripts/dist_train.sh ${NUM_GPUS} 'exp_name' ./configs/stereo/kitti_models/feature_clone.yaml`
+    
 - YOLOStereo
 
     `Step I`: Follow the instruction of [visualDet3D](https://github.com/Owen-Liuyuxuan/visualDet3D) to install the dependencies.
 
     `Step II`: Replace the some files in `visualDet3D` use the files that we provide in [here](stereo_models/YOLOStereo3D).
 
-    `Step III`: Prepare the data. Please fisrt follow instruction in [visualDet3D](https://github.com/Owen-Liuyuxuan/visualDet3D) to prepeare the data. Then download the estimated depth maps by DORN from `here`([training](https://drive.google.com/open?id=1lSJpQ8GUCxRNtWxo0lduYAbWkkXQa2cb), [testing](https://drive.google.com/file/d/1JuDhHGH8DXzNkZSmaVrWyEhI3YuE2GqT/view)).
+    `Step III`: Prepare the data. Please fisrt follow instruction in [visualDet3D](https://github.com/Owen-Liuyuxuan/visualDet3D) to prepeare the data. Then download the estimated depth maps by DORN from `here`([training](https://drive.google.com/open?id=1lSJpQ8GUCxRNtWxo0lduYAbWkkXQa2cb), [testing](https://drive.google.com/file/d/1JuDhHGH8DXzNkZSmaVrWyEhI3YuE2GqT/view)). Then put the depth maps into data/training/image_2_dorn.
 
     - feature-level generation
+    
+    `./launcher/train.sh  --config/feature_level_generation.py 0 $experiment_name `
 
 For image-level generation, we will release the synthesised virtual right iamges.
 # Citation

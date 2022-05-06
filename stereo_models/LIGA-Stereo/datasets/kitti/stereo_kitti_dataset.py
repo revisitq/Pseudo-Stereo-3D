@@ -314,8 +314,8 @@ class StereoKittiDataset(StereoDatasetTemplate):
 
         # load images
         left_img = self.get_image(info['image']['image_idx'], 2)
-        virtual_right_img = self.get_image(info['image']['image_idx'], 6)
-        right_img = self.get_image(info['image']['image_idx'], 3) if self.training else virtual_right_img
+        # virtual_right_img = self.get_image(info['image']['image_idx'], 6)
+        right_img = self.get_image(info['image']['image_idx'], 3) #if self.training else virtual_right_img
         depth_map = self.get_image(info['image']['image_idx'], '2_dorn') / 256.0
         # depth to disparity 
         depth_map = calib.fu_mul_baseline / (depth_map+1e-5)
@@ -323,7 +323,7 @@ class StereoKittiDataset(StereoDatasetTemplate):
         depth_map = depth_map[:, :, np.newaxis] 
         depth_map = np.tile(depth_map, (1, 1, 3))
         if flip_this_image:
-            right_img, left_img, virtual_right_img, depth_map = left_img[:, ::-1], right_img[:, ::-1], virtual_right_img[:, ::-1], depth_map[:, ::-1]
+            right_img, left_img, depth_map = left_img[:, ::-1], right_img[:, ::-1], depth_map[:, ::-1]
 
         # convert camera-view points into pseudo lidar points
         # see code in calibration_kitti.py
@@ -340,7 +340,7 @@ class StereoKittiDataset(StereoDatasetTemplate):
             'calib': calib,
             'calib_ori': calib_ori,
             'left_img': left_img,
-            'virtual_right_img': virtual_right_img,
+            # 'virtual_right_img': virtual_right_img,
             'depth_map': depth_map, 
             'image_shape': left_img.shape
         }
