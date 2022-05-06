@@ -11,7 +11,7 @@ We now release the code for feature-level generation and faeture-clone generatio
 
     `Step I`: Follow the instruction of [LIGA-Stereo](https://github.com/xy-guo/LIGA-Stereo) to install the dependencies.
 
-    `Step II`: Replace the some files in `LIGA-Stereo` use the files that we provide in [here](stereo_models/LIGA).
+    `Step II`: Replace the some files in `LIGA-Stereo` use the files that we provide in [here](stereo_models/LIGA-stereo).
 
     `Step III`: Prepare the data. Please fisrt follow instruction in [LIGA-Stereo](https://github.com/xy-guo/LIGA-Stereo) to prepeare the data. Then download the estimated depth maps by DORN from `here`([training](https://drive.google.com/open?id=1lSJpQ8GUCxRNtWxo0lduYAbWkkXQa2cb), [testing](https://drive.google.com/file/d/1JuDhHGH8DXzNkZSmaVrWyEhI3YuE2GqT/view)). Then put the depth maps into data/training/depth_2_dorn.
 
